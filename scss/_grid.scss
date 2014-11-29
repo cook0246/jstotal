@@ -1,0 +1,74 @@
+//*{outline:solid lightgrey;}
+.wrapper, body{max-width: $breakpoint-large; margin: 0 auto;}
+.box{@extend .clearfix; padding: 0 0.5rem; margin-bottom: 1rem; height: 100%;}
+.row{@extend .clearfix; width: 100%;}
+.btn{width: 100%;background: $color-b; color:$fcolor-a; text-transform: uppercase; font-size: $medium; border-radius: 2rem; border:red; margin-bottom: 0;} 
+.iconic{display: block; margin: 1rem auto;}
+
+.col-2{
+    color: $fcolor-a;
+    float: left;
+    // $number_of_columns, $margin, $container_width
+    //@include equalSpaced(2,50px,$breakpoint-large);
+}
+
+
+.col-3{
+    
+    background: $color-a; color: $fcolor-a; display: block; float: left;
+    h3{color:$fcolor-c}; padding: 1rem;
+    //@include equalSpaced(3,10px,550px);
+    
+    @media only screen and (max-width: $breakpoint-small) {
+        .iconic{height: 40%; width: 40%; };
+        h3{font-size: $large; margin: 0 auto};
+        p{font-size: $medium; margin: 0 auto};
+    }
+    
+    @media only screen and (min-width: $breakpoint-small) {
+        .iconic {margin: 1rem auto};
+        h3{font-size: $medium; margin: 0 auto};
+        p{font-size: $small; margin: 0 auto};
+        //.box{width: 33.3%;}
+       @include equalSpaced(4,10px, $breakpoint-large);
+    
+    }
+    @media only screen and (min-width: $breakpoint-large) {
+        .iconic{height: 55%; width: 55%};
+        //@include equalSpaced(3,15px,$breakpoint-large);  
+        @include equalSpaced(3,10px, $breakpoint-large);
+    }
+}
+
+.col-4{
+    display: block; float: left;
+    background: $fcolor-c; color: $fcolor-a; padding-bottom: 1%;
+    h4{font-size: $small; margin-top: 0.5rem; margin-bottom: 0; text-align: center;}
+    p{font-size: $smaller; margin: 1rem auto;}
+    
+    
+    @media only screen and (max-width: $breakpoint-small) {
+        width: 100%;
+    }
+    
+    @media only screen and (min-width: $breakpoint-small) {
+        @include equalSpaced(4,5px, $breakpoint-large);
+        button{font-size: $smaller;}
+       
+    }
+    @media only screen and (min-width: $breakpoint-large) {
+       // @include equalSpaced(4,5px, $breakpoint-large);
+        button{font-size: $small;}
+        min-height: 13rem; 
+    }
+}
+.foot{width:100%;   background: $color-a; color: $fcolor-a; text-align: center; h5{font-size: $small; margin-top: 3rem;};}
+
+
+@media only screen and (max-width: $breakpoint-small) {
+    .box{width:100%; margin: 0.5rem 0;}
+}
+
+@media only screen and (min-width: $breakpoint-large) {
+
+}

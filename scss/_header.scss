@@ -1,0 +1,20 @@
+header{ 
+    display: block; margin: 0 auto; width: 100%; 
+    
+    @media only screen and (max-width: $breakpoint-small) {
+            background: $color-b; text-align: center; 
+            font-size: 100%; color: $fcolor-a;  font-size: 80%;
+            padding: 0.1rem 0.5rem; 
+            height: 10rem; line-height: 1.5rem;
+    }
+    
+    @media only screen and (min-width: $breakpoint-small) {
+            background: $color-b; color: $fcolor-a; padding-left: 10%;
+    }
+
+    @media only screen and (min-width: $breakpoint-large) {
+            //background: $color-c; 
+            
+            hgroup{text-align: center;}
+    }
+}
